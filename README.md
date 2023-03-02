@@ -12,7 +12,7 @@ Easily done.
 1. To start cd into the app directory:
 `cd app`
 
-2. Then to make sure all dependencies are installed uun: `yarn install`
+2. Then to make sure all dependencies are installed run: `yarn install`
 
 ```bash
 # To get QR code
