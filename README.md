@@ -9,8 +9,14 @@ This app makes splitting receipts easy
 Easily done.
 
 ## Running the app
+1. To start cd into the app directory:
+`cd app`
+
+2. Then to make sure all dependencies are installed uun: `yarn install`
+
 ```bash
-cd app
+# To get QR code
+yarn start
 
 #For web app
 yarn web

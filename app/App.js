@@ -1,15 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import * as Device from 'expo-device';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import NavBar from './components/NavBar';
+import LandingPage from './components/LandingPage';
+
+const backgroundImage = require('./assets/blue_purple_gradient.jpg');
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world!</Text>
-      <Text>
-        This device is {Device.manufacturer}: {Device.modelName}
-      </Text>
-      <StatusBar style="auto" />
+      <ImageBackground source={backgroundImage} resizeMode="cover" style={styles.backgroundImage}>
+        <NavBar/>
+        <LandingPage/>
+      </ImageBackground>
     </View>
   );
 }
@@ -17,8 +18,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#e4eaf5',
+  },
+  backgroundImage: {
+    opacity: 0.5,
+    width: '100%',
+    height: '100%',
+  },
+  navbar: {
+    paddingTop: '5%',
+    padding: '2%',
+    alignItems: 'left',
+    justifyContent: 'left',
   },
 });
